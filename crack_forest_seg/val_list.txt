@@ -1,0 +1,11 @@
+JPEGImages/008.jpg Annotations/008.png
+JPEGImages/077.jpg Annotations/077.png
+JPEGImages/020.jpg Annotations/020.png
+JPEGImages/086.jpg Annotations/086.png
+JPEGImages/027.jpg Annotations/027.png
+JPEGImages/070.jpg Annotations/070.png
+JPEGImages/029.jpg Annotations/029.png
+JPEGImages/087.jpg Annotations/087.png
+JPEGImages/117.jpg Annotations/117.png
+JPEGImages/103.jpg Annotations/103.png
+JPEGImages/048.jpg Annotations/048.png

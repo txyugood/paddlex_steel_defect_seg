@@ -16,15 +16,15 @@ eval_transforms = T.Compose([
 ])
 
 train_dataset = pdx.datasets.SegDataset(
-                        data_dir='./crack_forest_seg',
-                        file_list='./crack_forest_seg/train_list.txt',
-                        label_list='./crack_forest_seg/labels.txt',
+                        data_dir='./dataset',
+                        file_list='./dataset/train_list.txt',
+                        label_list='./dataset/labels.txt',
                         transforms=train_transforms,
                         shuffle=True)
 eval_dataset = pdx.datasets.SegDataset(
-                        data_dir='./crack_forest_seg',
-                        file_list='./crack_forest_seg/val_list.txt',
-                        label_list='crack_forest_seg/labels.txt',
+                        data_dir='./dataset',
+                        file_list='./dataset/val_list.txt',
+                        label_list='dataset/labels.txt',
                         transforms=eval_transforms)
 
 # 初始化模型，并进行训练

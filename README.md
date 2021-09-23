@@ -58,6 +58,10 @@ python code/infer.py
 则可生成可视化的分割结果。
 
 预测结果如下：
+![](https://github.com/txyugood/paddlex_steel_defect_seg/blob/master/images/4e8e7a28c.jpg)
+![](https://github.com/txyugood/paddlex_steel_defect_seg/blob/master/images/visualize_4e8e7a28c.jpg)
+![](https://github.com/txyugood/paddlex_steel_defect_seg/blob/master/images/9d34d1ed3.jpg)
+![](https://github.com/txyugood/paddlex_steel_defect_seg/blob/master/images/visualize_9d34d1ed3.jpg)
 
 ### 7 模型导出
 模型训练后保存在output文件夹，如果要使用PaddleInference进行部署需要导出成静态图的模型,运行如下命令，会自动在output文件夹下创建一个`inference_model`的文件夹，用来存放导出后的模型。

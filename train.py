@@ -32,7 +32,7 @@ eval_dataset = pdx.datasets.SegDataset(
 num_classes = len(train_dataset.labels)
 
 # API说明：https://paddlex.readthedocs.io/zh_CN/develop/apis/models/semantic_segmentation.html#paddlex-seg-unet
-model = pdx.seg.UNet(num_classes=num_classes, use_mixed_loss=True)
+model = pdx.seg.UNet(num_classes=num_classes, use_mixed_loss=[["CrossEntropyLoss", 0.8], ["DiceLoss", 0.2]])
 
 # API说明：https://paddlex.readthedocs.io/zh_CN/develop/apis/models/semantic_segmentation.html#train
 # 各参数介绍与调整说明：https://paddlex.readthedocs.io/zh_CN/develop/appendix/parameters.html

@@ -40,5 +40,18 @@ model = pdx.seg.UNet(num_classes=num_classes, use_mixed_loss=True)
 | -- | -- | -- | -- | -- | -- | -- | -- |
 | UNET  | 100 | 400x64 | 16 | 0.01 | CrossEntropyLoss LovaszSoftmaxLoss  | RandomHorizontalFlip RandomDistort RandomCrop | 56.4%
 
+下面还可以进一步通过设置损失函数还提升模型精度，上面通过使用use_mixed_loss=True设置paddlex预先设定好的损失函数，我们也可以自定义损失函数的组合与权重。设置
+
+```
+use_mixed_loss=[["CrossEntropyLoss", 0.8], ["DiceLoss", 0.2]]
+```
+
+这样就可以自己组合合适的损失函数。这里我们将LovaszSoftmaxLoss调整为[DiceLoss](https://github.com/PaddlePaddle/PaddleSeg/blob/release/2.2/docs/module/loss/DiceLoss_cn.md)重新训练，得到以下结果。
 
 
+| arch  | epoch | resolution |  batch size | learning rate | loss | Augment|  miou |
+| -- | -- | -- | -- | -- | -- | -- | -- |
+| UNET  | 100 | 400x64 | 16 | 0.01 | CrossEntropyLoss LovaszSoftmaxLoss  | RandomHorizontalFlip RandomDistort RandomCrop | 56.4%
+| UNET  | 100 | 400x64 | 16 | 0.01 | CrossEntropyLoss DiceLoss  | RandomHorizontalFlip RandomDistort RandomCrop | 56.7%
+
+可以看到模型有0.3%的提升。

@@ -59,11 +59,27 @@ python code/infer.py
 
 预测结果如下：
 <div align="center">
+image_4e8e7a28c
 <img src="./images/4e8e7a28c.jpg"  width = "1000" />  
+gt_4e8e7a28c
+<img src="./images/gt_4e8e7a28c.jpg"  width = "1000" />  
+predict_4e8e7a28c
 <img src="./images/visualize_4e8e7a28c.jpg"  width = "1000" />  
+image_9d34d1ed3
 <img src="./images/9d34d1ed3.jpg"  width = "1000" />  
+gt_9d34d1ed3
+<img src="./images/gt_9d34d1ed3.jpg"  width = "1000" />  
+predict_9d34d1ed3
 <img src="./images/visualize_9d34d1ed3.jpg"  width = "1000" />  
  </div>
+
+使用calc_fps.py脚本可计算预测速度，使用UNET网络推理速度如下。
+
+| arch | resolution  |  FPS |
+| --  | -- | -- |
+| UNET  | 1600x256  | 26.38 |
+
+ 
 
 ### 7 模型导出
 模型训练后保存在output文件夹，如果要使用PaddleInference进行部署需要导出成静态图的模型,运行如下命令，会自动在output文件夹下创建一个`inference_model`的文件夹，用来存放导出后的模型。

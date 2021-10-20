@@ -11,6 +11,7 @@ for i, image_name in enumerate(image_names):
         start_time = time.time()
     if i > 199:
         break
+
     result = model.predict(image_name)
     pdx.seg.visualize(image_name, result, weight=0.4, save_dir='output/unet')
 fps = (time.time() - start_time) / 100

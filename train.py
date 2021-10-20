@@ -1,6 +1,15 @@
 import paddlex as pdx
 from paddlex import transforms as T
 
+import paddle
+import numpy as np
+import random
+
+paddle.seed(1234)
+np.random.seed(1234)
+random.seed(1234)
+
+
 train_transforms = T.Compose([
     T.RandomCrop((64, 400)),
     T.RandomHorizontalFlip(),

@@ -56,7 +56,7 @@ use_mixed_loss=[["CrossEntropyLoss", 0.8], ["DiceLoss", 0.2]]
 
 可以看到模型有0.3%的提升。
 
-## (4)将无缺陷的样本也加入到训练中去。
+## (4)加入无缺陷的训练样本
 将类别都是0（无缺陷）的样本也加入到训练集中，保持验证集不变，重新训练模型，性能提升如下图。
 
 | arch  | epoch | resolution |  batch size | learning rate | loss | Augment|  miou |

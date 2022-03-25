@@ -3,7 +3,7 @@
 
 
 ### 2 数据准备
-数据集中包含6666张已经标注好的数据，原始数据标注形式为csv格式。该项目采用语义分割的标注方式，在本文档中提供了SEG数据集格式。[点击此处下载数据集]()
+数据集中包含6666张已经标注好的数据，原始数据标注形式为csv格式。该项目采用语义分割的标注方式，在本文档中提供了SEG数据集格式。[点击此处下载数据集](https://aistudio.baidu.com/aistudio/datasetdetail/108486)
 更多数据格式信息请参考[数据标注说明文档](https://paddlex.readthedocs.io/zh_CN/release-1.3/data/annotation/index.html)
 
 * **数据切分**
